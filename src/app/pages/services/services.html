@@ -1,0 +1,46 @@
+<section class="services-section">
+  <!-- Header -->
+  <div class="services-header">
+    <p class="subtitle">WHAT WE DO</p>
+    <h1 class="title">OUR SERVICES</h1>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="services-grid">
+    <!-- Primary Services -->
+    <div class="service-card large" *ngFor="let service of services; let i = index">
+      <div class="service-image-container">
+        <img 
+          *ngIf="service.image" 
+          [src]="service.image" 
+          [alt]="service.title"
+          class="service-image"
+        />
+        <div *ngIf="!service.image" class="image-placeholder"></div>
+      </div>
+
+      <div class="service-content">
+        <h3 class="service-title">{{ service.title }}</h3>
+        <p class="service-description">{{ service.description }}</p>
+
+        <!-- Service Details (if available) -->
+        <div *ngIf="service.details" class="service-details">
+          <div class="detail-item" *ngFor="let detail of service.details">
+            <div class="detail-icon">
+              <svg *ngIf="detail.includes('BUILDING')" viewBox="0 0 24 24" width="24" height="24">
+                <rect fill="currentColor" x="3" y="1" width="8" height="8"></rect>
+              </svg>
+              <svg *ngIf="detail.includes('CARPENTRY')" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M12 2L20 6V12L12 16L4 12V6Z"></path>
+              </svg>
+              <svg *ngIf="detail.includes('IT')" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+              </svg>
+            </div>
+            <span class="detail-text">{{ detail }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

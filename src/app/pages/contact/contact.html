@@ -1,0 +1,87 @@
+<section class="contact-section">
+  <div class="contact-container">
+    <!-- Left Side: Contact Info -->
+    <div class="contact-info">
+      <h1 class="contact-title">START A<br>PROJECT</h1>
+      
+      <div class="contact-details">
+        <div class="contact-item">
+          <p class="contact-label">EMAIL</p>
+          <a href="mailto:hello@eleah.studio" class="contact-value">HELLO@ELEAH.STUDIO</a>
+        </div>
+
+        <div class="contact-item">
+          <p class="contact-label">LOCATION</p>
+          <p class="contact-value">NEW YORK, NY</p>
+        </div>
+
+        <div class="contact-item">
+          <p class="contact-label">AVAILABILITY</p>
+          <div class="availability-status">
+            <span class="status-indicator"></span>
+            <p class="contact-value">ACCEPTING PROJECTS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Contact Form -->
+    <div class="contact-form-wrapper">
+      <form class="contact-form" (ngSubmit)="submitForm()">
+        <div class="form-group">
+          <label for="name">NAME</label>
+          <input 
+            type="text" 
+            id="name" 
+            [(ngModel)]="formData().name" 
+            name="name"
+            placeholder="FULL NAME" 
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">EMAIL</label>
+          <input 
+            type="email" 
+            id="email" 
+            [(ngModel)]="formData().email" 
+            name="email"
+            placeholder="YOUR@EMAIL.COM" 
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="discipline">PROJECT TYPE</label>
+          <select 
+            id="discipline" 
+            [(ngModel)]="formData().discipline" 
+            name="discipline"
+            required
+          >
+            <option value="" disabled>SELECT DISCIPLINE</option>
+            <option value="engineering">Engineering</option>
+            <option value="architecture">Architecture</option>
+            <option value="interior-design">Interior Design</option>
+            <option value="consulting">Consulting</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="brief">PROJECT BRIEF</label>
+          <textarea 
+            id="brief" 
+            [(ngModel)]="formData().brief" 
+            name="brief"
+            placeholder="DESCRIBE YOUR PROJECT..."
+            rows="6"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">SUBMIT INQUIRY</button>
+      </form>
+    </div>
+  </div>
+</section>
