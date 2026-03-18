@@ -6,7 +6,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   color: white;
@@ -16,10 +15,7 @@
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
@@ -27,13 +23,12 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 120px 80px 0;
+  padding: 120px 80px 80px;
   max-width: 900px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 80px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -74,7 +69,6 @@
   font-weight: 600;
   margin-top: 40px;
   display: inline-block;
-  text-decoration: none;
 }
 
 .cta-button:hover {
@@ -89,7 +83,7 @@
   margin-top: auto;
 }
 
-/* Services Preview Section */
+/* Services Preview */
 .services-preview {
   padding: 100px 80px;
   background: white;
@@ -102,6 +96,7 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 60px;
+  gap: 40px;
 }
 
 .services-preview .preview-header .preview-label {
@@ -111,7 +106,6 @@
   text-transform: uppercase;
   margin: 0;
   display: block;
-  line-height: 1;
 }
 
 .services-preview .preview-header .preview-title {
@@ -121,20 +115,6 @@
   color: #333;
   letter-spacing: -0.5px;
   flex: 1;
-  margin-left: 40px;
-}
-
-.services-preview .preview-header .view-all {
-  white-space: nowrap;
-}
-
-.preview-label {
-  font-size: 11px;
-  letter-spacing: 2px;
-  color: #999;
-  text-transform: uppercase;
-  margin: 0 0 15px 0;
-  display: block;
 }
 
 .services-preview-grid {
@@ -164,7 +144,6 @@
   margin: 0 0 15px 0;
   color: #333;
   letter-spacing: -0.5px;
-  line-height: 1.3;
 }
 
 .service-preview-card p {
@@ -172,45 +151,9 @@
   line-height: 1.7;
   color: #666;
   margin: 0;
-  letter-spacing: 0px;
 }
 
-@media (max-width: 1024px) {
-  .services-preview-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .services-preview {
-    padding: 60px 30px;
-  }
-
-  .services-preview .preview-header {
-    flex-direction: column;
-    margin-bottom: 40px;
-  }
-
-  .services-preview .preview-header .preview-title {
-    margin-left: 0;
-    margin-top: 10px;
-    font-size: 32px;
-  }
-
-  .services-preview .preview-header .view-all {
-    margin-top: 15px;
-  }
-
-  .services-preview-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-preview-card {
-    padding: 30px;
-  }
-}
-
-/* Projects Preview Section */
+/* Projects Preview */
 .projects-preview {
   padding: 100px 80px;
   background: white;
@@ -240,8 +183,9 @@
   letter-spacing: 1px;
   font-weight: 600;
   text-transform: uppercase;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
   position: relative;
+  white-space: nowrap;
 }
 
 .view-all:hover {
@@ -282,10 +226,6 @@
 .preview-card:hover {
   border-color: #ddd;
   transform: translateY(-5px);
-}
-
-.preview-card-large {
-  grid-column: span 1;
 }
 
 .preview-card-large .preview-image {
@@ -329,9 +269,16 @@
   font-size: 12px;
   color: #999;
   margin: 0;
-  letter-spacing: 0.5px;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .services-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet & Mobile Max */
 @media (max-width: 768px) {
   .hero {
     margin-top: 65px;
@@ -340,8 +287,7 @@
   }
 
   .hero-content {
-    padding: 60px 30px 0;
-    padding-bottom: 40px;
+    padding: 60px 30px 40px;
   }
 
   .hero-subtitle {
@@ -371,16 +317,12 @@
   .services-preview .preview-header {
     flex-direction: column;
     margin-bottom: 40px;
+    gap: 10px;
   }
 
   .services-preview .preview-header .preview-title {
-    margin-left: 0;
-    margin-top: 10px;
     font-size: 32px;
-  }
-
-  .services-preview .preview-header .view-all {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   .services-preview-grid {
@@ -431,10 +373,6 @@
     font-size: 32px;
   }
 
-  .stats-preview-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .contact-preview {
     padding: 60px 30px;
   }
@@ -453,6 +391,7 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
   .hero {
     margin-top: 65px;
@@ -461,8 +400,7 @@
   }
 
   .hero-content {
-    padding: 40px 20px 0;
-    padding-bottom: 30px;
+    padding: 40px 20px 30px;
   }
 
   .hero-subtitle {
@@ -489,7 +427,7 @@
   }
 
   .services-preview {
-    padding: 50px 20px;
+    padding: 40px 20px;
   }
 
   .services-preview .preview-header .preview-label {
@@ -516,7 +454,7 @@
   }
 
   .projects-preview {
-    padding: 50px 20px;
+    padding: 40px 20px;
   }
 
   .preview-title {
@@ -541,7 +479,7 @@
   }
 
   .about-preview {
-    padding: 50px 20px;
+    padding: 40px 20px;
   }
 
   .about-preview-container {
@@ -582,7 +520,7 @@
   }
 
   .contact-preview {
-    padding: 50px 20px;
+    padding: 40px 20px;
   }
 
   .contact-preview-label {
@@ -612,6 +550,7 @@
     font-size: 14px;
   }
 }
+/* About Preview */
 .about-preview {
   padding: 100px 80px;
   background: #f5f5f5;
@@ -624,7 +563,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
-  max-width: 1400px;
 }
 
 .about-preview-label {
@@ -650,10 +588,6 @@
   line-height: 1.7;
   color: #666;
   margin: 0 0 30px 0;
-}
-
-.about-preview-right {
-  width: 100%;
 }
 
 .stats-preview-grid {
@@ -693,26 +627,7 @@
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
-  .about-preview {
-    padding: 60px 30px;
-  }
-
-  .about-preview-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .about-preview-title {
-    font-size: 32px;
-  }
-
-  .stats-preview-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Contact Preview Section */
+/* Contact Preview */
 .contact-preview {
   padding: 100px 80px;
   background: #1a1a1a;
@@ -726,7 +641,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
-  max-width: 1400px;
 }
 
 .contact-preview-label {
@@ -756,11 +670,6 @@
 
 .cta-link {
   color: white;
-  border-bottom-color: white;
-}
-
-.cta-link:hover {
-  color: #ccc;
 }
 
 .cta-link::after {
@@ -813,7 +722,6 @@
 }
 
 .status-dot {
-  display: inline-block;
   width: 12px;
   height: 12px;
   background-color: #e64545;
@@ -821,21 +729,7 @@
   animation: pulse 2s infinite;
 }
 
-@media (max-width: 768px) {
-  .contact-preview {
-    padding: 60px 30px;
-  }
-
-  .contact-preview-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .contact-preview-title {
-    font-size: 32px;
-  }
-
-  .contact-preview-info {
-    gap: 30px;
-  }
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
 }
