@@ -4,6 +4,7 @@
   max-width: 1400px;
   margin: 0 auto;
   min-height: calc(100vh - 80px);
+  margin-top: 80px;
 }
 
 .projects-header {
@@ -125,6 +126,13 @@
 @media (max-width: 768px) {
   .projects-section {
     padding: 60px 30px;
+    margin-top: 65px;
+    min-height: auto;
+  }
+
+  .projects-header {
+    margin-bottom: 50px;
+    position: relative;
   }
 
   .projects-grid {
@@ -139,5 +147,69 @@
 
   .section-title {
     font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .project-count {
+    position: static;
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  .project-info {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 40px 20px;
+    margin-top: 65px;
+  }
+
+  .projects-header {
+    margin-bottom: 40px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 0;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+
+  .project-count {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    color: #999;
+  }
+
+  .project-card-large .project-image,
+  .project-card-medium .project-image {
+    height: 200px;
+  }
+
+  .project-info {
+    padding: 15px;
+  }
+
+  .project-category {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .project-name {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .project-specs {
+    font-size: 11px;
   }
 }

@@ -96,6 +96,7 @@
 @media (max-width: 768px) {
   .about-hero {
     padding: 60px 30px;
+    margin-top: 65px;
   }
 
   .about-content {
@@ -118,5 +119,50 @@
 
   .stat-number {
     font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 40px 20px;
+    margin-top: 65px;
+  }
+
+  .about-label {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .about-title {
+    font-size: 28px;
+    letter-spacing: -0.5px;
+  }
+
+  .about-description p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .studio-stats {
+    padding: 50px 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 25px 20px;
+  }
+
+  .stat-number {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .stat-label {
+    font-size: 10px;
+    letter-spacing: 1px;
   }
 }

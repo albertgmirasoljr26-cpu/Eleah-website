@@ -1,15 +1,32 @@
 <nav class="navbar">
   <a routerLink="" class="navbar-brand">ELEAH</a>
 
+  <!-- Desktop Menu -->
   <ul class="navbar-menu">
-    <li><a routerLink="" class="nav-link">HOME</a></li>
-    <li><a routerLink="about" class="nav-link">ABOUT</a></li>
-    <li><a routerLink="projects" class="nav-link">PROJECTS</a></li>
-    <li><a routerLink="services" class="nav-link">SERVICES</a></li>
-    <li><a routerLink="contact" class="nav-link">CONTACT</a></li>
-    
-
+    <li><a routerLink="" class="nav-link" (click)="closeMenu()">HOME</a></li>
+    <li><a routerLink="about" class="nav-link" (click)="closeMenu()">ABOUT</a></li>
+    <li><a routerLink="projects" class="nav-link" (click)="closeMenu()">PROJECTS</a></li>
+    <li><a routerLink="services" class="nav-link" (click)="closeMenu()">SERVICES</a></li>
+    <li><a routerLink="contact" class="nav-link" (click)="closeMenu()">CONTACT</a></li>
   </ul>
+
+  <!-- Mobile Menu Button -->
+  <button class="mobile-menu-toggle" (click)="toggleMenu()" [class.active]="menuOpen()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" *ngIf="menuOpen()">
+    <ul class="mobile-menu-list">
+      <li><a routerLink="" class="mobile-nav-link" (click)="closeMenu()">HOME</a></li>
+      <li><a routerLink="about" class="mobile-nav-link" (click)="closeMenu()">ABOUT</a></li>
+      <li><a routerLink="projects" class="mobile-nav-link" (click)="closeMenu()">PROJECTS</a></li>
+      <li><a routerLink="services" class="mobile-nav-link" (click)="closeMenu()">SERVICES</a></li>
+      <li><a routerLink="contact" class="mobile-nav-link" (click)="closeMenu()">CONTACT</a></li>
+    </ul>
+  </div>
 
   <div class="navbar-icon"></div>
 </nav>

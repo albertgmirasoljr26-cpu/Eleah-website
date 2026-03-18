@@ -34,6 +34,8 @@
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 80px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero-subtitle {
@@ -43,7 +45,6 @@
   margin: 0 0 60px 0;
   font-weight: 400;
   text-transform: uppercase;
-
 }
 
 .hero-title {
@@ -332,6 +333,64 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    margin-top: 65px;
+    height: 60vh;
+    min-height: 500px;
+  }
+
+  .hero-content {
+    padding: 60px 30px 0;
+    padding-bottom: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 11px;
+    margin: 0 0 30px 0;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    line-height: 1.3;
+  }
+
+  .cta-button {
+    font-size: 11px;
+    padding: 14px 24px;
+    margin-top: 30px;
+  }
+
+  .coordinates {
+    font-size: 10px;
+  }
+
+  .services-preview {
+    padding: 60px 30px;
+  }
+
+  .services-preview .preview-header {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .services-preview .preview-header .preview-title {
+    margin-left: 0;
+    margin-top: 10px;
+    font-size: 32px;
+  }
+
+  .services-preview .preview-header .view-all {
+    margin-top: 15px;
+  }
+
+  .services-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-preview-card {
+    padding: 30px;
+  }
+
   .projects-preview {
     padding: 60px 30px;
   }
@@ -340,6 +399,10 @@
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 40px;
+  }
+
+  .preview-title {
+    font-size: 32px;
   }
 
   .view-all {
@@ -355,12 +418,200 @@
     height: 250px;
   }
 
-  .preview-title {
-    font-size: 28px;
+  .about-preview {
+    padding: 60px 30px;
+  }
+
+  .about-preview-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-preview-title {
+    font-size: 32px;
+  }
+
+  .stats-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-preview {
+    padding: 60px 30px;
+  }
+
+  .contact-preview-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-preview-title {
+    font-size: 32px;
+  }
+
+  .contact-preview-info {
+    gap: 30px;
   }
 }
 
-/* About Preview Section */
+@media (max-width: 480px) {
+  .hero {
+    margin-top: 65px;
+    height: 55vh;
+    min-height: 450px;
+  }
+
+  .hero-content {
+    padding: 40px 20px 0;
+    padding-bottom: 30px;
+  }
+
+  .hero-subtitle {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  .cta-button {
+    font-size: 10px;
+    padding: 12px 20px;
+    margin-top: 20px;
+  }
+
+  .coordinates {
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+
+  .services-preview {
+    padding: 50px 20px;
+  }
+
+  .services-preview .preview-header .preview-label {
+    font-size: 10px;
+  }
+
+  .services-preview .preview-header .preview-title {
+    font-size: 24px;
+    margin-top: 8px;
+  }
+
+  .service-preview-card {
+    padding: 20px;
+  }
+
+  .service-preview-card h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .service-preview-card p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .projects-preview {
+    padding: 50px 20px;
+  }
+
+  .preview-title {
+    font-size: 24px;
+  }
+
+  .preview-card-large .preview-image {
+    height: 200px;
+  }
+
+  .preview-info {
+    padding: 20px;
+  }
+
+  .preview-info h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .preview-info p {
+    font-size: 11px;
+  }
+
+  .about-preview {
+    padding: 50px 20px;
+  }
+
+  .about-preview-container {
+    gap: 30px;
+  }
+
+  .about-preview-label {
+    font-size: 10px;
+  }
+
+  .about-preview-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .about-preview-text {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .stats-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .stat-preview-card {
+    padding: 25px 20px;
+  }
+
+  .stat-preview-number {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  .stat-preview-label {
+    font-size: 9px;
+  }
+
+  .contact-preview {
+    padding: 50px 20px;
+  }
+
+  .contact-preview-label {
+    font-size: 10px;
+  }
+
+  .contact-preview-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .contact-preview-text {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .contact-preview-info {
+    gap: 20px;
+  }
+
+  .info-label {
+    font-size: 10px;
+  }
+
+  .info-value {
+    font-size: 14px;
+  }
+}
 .about-preview {
   padding: 100px 80px;
   background: #f5f5f5;
